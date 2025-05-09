@@ -1,0 +1,151 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #080808;
+    margin: 100px auto;
+}
+
+.container {
+    background-color: #1A1919;
+    max-width: 1034px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: -15px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-title {
+    font-size: 64px;
+    color: #FFF;
+    text-align: center;
+}
+
+.header-text {
+    font-size: 32px;
+    color: #FFF;
+    margin: 15px 0 0;
+    text-align: center;
+}
+
+.edu-programs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.interests {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.interest {
+    display: flex;
+    padding: 12px 12px;
+    font-size: 22px;
+    color: #FFF;
+    border: 2px solid #555;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #222;
+    color: #FFF;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    transition: 0.5s ease;
+    transform: scale(1);
+}
+
+.interest.active {
+    background-color: #7b2ff7;
+    border-color: #a970ff;
+    color: #fff;
+}
+
+.interest:hover {
+  filter: brightness(1.4);
+}
+
+.result-btn {
+    display: flex;
+    background-color: #a020f0;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    font-size: 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.4s ease;
+    transition: 0.4s ease;
+    text-decoration: none;
+}
+
+.result-btn:hover {
+    background-color: #8c1edb;
+    box-shadow: 0 0 10px #a020f0, 0 0 10px #b591f1, 0 0 10px #FFF;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    justify-content: center;
+}
+
+.about-me-text {
+    font-size: 32px;
+    color: #FFF;
+    text-align: center;
+}
+
+.contact-information {
+    display: flex;
+    justify-content: center;
+}
+
+.information-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.message-area {
+    display: flex;
+    white-space: pre-wrap;
+    resize: none;
+    gap: 10px;
+    border: 1px solid #000;
+    border-radius: 14px;
+    padding: 10px;
+    width: 590px;
+    height: 120px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22.97px;
+}
+
+.send-message-button {
+    display: flex;
+    gap: 10px;
+    padding: 20px 35px;
+    background-color: #191A23;
+    color: #FFF;
+    border: 1px solid #191A23;
+    border-radius: 14px;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.send-message-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+}
