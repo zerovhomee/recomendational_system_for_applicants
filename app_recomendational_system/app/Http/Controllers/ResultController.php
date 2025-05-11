@@ -30,11 +30,10 @@ class ResultController extends Controller
         ]);
 
         $response = Http::post('http://localhost:5000/predict', [
-            'features' => $inputData
+            'text' => $inputData
         ]);
 
         $prediction = $response->json()['prediction'];
-        $prediction = mb_substr($prediction, 23, -3);
 
         return view('result.show', compact('prediction'));
 

@@ -72,13 +72,18 @@
     <div class="container">
         <div class="header-content">
             <span class="header-title">Ваши результаты:</span>
-            <span class="header-text">{{$prediction}}</span>
-            <span class="header-text">Программа ориентирует выпускников на активное участие и инициативу в прорывном развитии радиоэлектронных
-          производств, на освоение новой техники, внедрение новыхтехнологий, изменение культуры производства,
-          следование основным направлениям развития четвертой промышленной революции.</span>
         </div>
     </div>
 </header>
+
+<!-- Блок для вывода длинного текста -->
+<section class="prediction-result">
+    <div class="container">
+        <div class="prediction-content scrollable-text">
+            {{ $prediction }}
+        </div>
+    </div>
+</section>
 
 
 <script src="scripts/script_page_3.js"></script>

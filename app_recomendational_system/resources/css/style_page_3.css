@@ -31,3 +31,24 @@ body {
     color: #FFF;
     margin: 15px 0 0;
 }
+
+.prediction-content {
+    max-height: 300px; /* Фиксированная высота */
+    overflow-y: auto;  /* Вертикальная прокрутка */
+    padding: 15px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    white-space: pre-wrap; /* Сохраняет переносы строк */
+    word-break: break-word; /* Перенос длинных слов */
+}
+
+/* Стили для полосы прокрутки */
+.scrollable-text::-webkit-scrollbar {
+    width: 8px;
+}
+.scrollable-text::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}

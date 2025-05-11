@@ -1,6 +1,7 @@
 # Пример на Flask
 from flask import Flask, request, jsonify
-from test import test
+from model import model_recomendation
+import json 
 
 app = Flask(__name__)
 
@@ -8,7 +9,11 @@ app = Flask(__name__)
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
-    prediction = test(data)
+    text = data['text']
+    text_data = text['text']
+    print(text_data)
+    if data:
+        prediction = model_recomendation(text_data)
     return jsonify({'prediction': prediction})
 
 if __name__ == '__main__':
