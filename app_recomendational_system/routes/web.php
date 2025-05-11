@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,10 +9,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\StartPageController::class, 'index'])->name('home');
 
-Route::get('/test', [App\Http\Controllers\TestShowController::class, 'test'])->name('test');
+Route::get('/test', [App\Http\Controllers\TestShowController::class, 'index'])->name('test');
 
-Route::get('/result', [App\Http\Controllers\ResultController::class, 'result'])->name('result');
+Route::post('/test/result', [App\Http\Controllers\ResultController::class, 'index'])->name('result');
 
 Route::get('/user/{user}', [App\Http\Controllers\UserShowController::class, 'user'])->name('user');

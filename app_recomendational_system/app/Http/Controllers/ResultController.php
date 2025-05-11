@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class ResultController extends Controller
 {
@@ -23,6 +24,19 @@ class ResultController extends Controller
      */
     public function index()
     {
-        return view('result.show');
+
+        $inputData = request()->validate([
+            'text' => 'required',
+        ]);
+
+        $response = Http::post('http://localhost:5000/predict', [
+            'features' => $inputData
+        ]);
+
+        $prediction = $response->json()['prediction'];
+        $prediction = mb_substr($prediction, 23, -3);
+
+        return view('result.show', compact('prediction'));
+
     }
 }
