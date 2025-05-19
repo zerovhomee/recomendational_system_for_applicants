@@ -1,0 +1,54 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #080808;
+    margin: 100px auto;
+}
+
+.container {
+    background-color: #1A1919;
+    max-width: 1034px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: -15px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-title {
+    font-size: 64px;
+    color: #FFF;
+    text-align: center;
+}
+
+.header-text {
+    font-size: 32px;
+    color: #FFF;
+    margin: 15px 0 0;
+}
+
+.prediction-content {
+    max-height: 300px; /* Фиксированная высота */
+    overflow-y: auto;  /* Вертикальная прокрутка */
+    padding: 15px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    white-space: pre-wrap; /* Сохраняет переносы строк */
+    word-break: break-word; /* Перенос длинных слов */
+}
+
+/* Стили для полосы прокрутки */
+.scrollable-text::-webkit-scrollbar {
+    width: 8px;
+}
+.scrollable-text::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
