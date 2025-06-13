@@ -8,7 +8,7 @@ loader = DirectoryLoader(
 document = loader.load()
 
 from sentence_transformers import SentenceTransformer
-model = SentenceTransformer('all-mpnet-base-v2')
+model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
 texts = [doc.page_content for doc in document]
 embeddings = model.encode(texts, normalize_embeddings=True)
 
