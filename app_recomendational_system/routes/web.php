@@ -15,4 +15,4 @@ Route::get('/test', [App\Http\Controllers\TestShowController::class, 'index'])->
 
 Route::post('/test/result', [App\Http\Controllers\ResultController::class, 'index'])->name('result');
 
-Route::get('/user/{user}', [App\Http\Controllers\UserShowController::class, 'user'])->name('user');
+Route::get('/recommendations', [\App\Http\Controllers\Recomendation\ShowController::class, 'index'])->name('recommendations.index');

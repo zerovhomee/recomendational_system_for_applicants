@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Recomendation;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Recomendation;
+use Illuminate\Support\Facades\Auth;
 
-class UserShowController extends Controller
+class ShowController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +25,7 @@ class UserShowController extends Controller
      */
     public function index()
     {
-        return view('user.show');
+        $recomendations = Auth::user()->recomendations;
+        return view('recommendation.show', compact('recomendations'));
     }
 }

@@ -14,7 +14,9 @@ export default defineConfig({
                 'resources/css/style_page_3.css',
                 'resources/js/script_page_3.js',
                 'resources/css/auth.css',
-                'resources/css/reg.css'
+                'resources/css/reg.css',
+                'resources/css/personal_account.css',
+                'resources/js/personal_account.js',
             ],
             refresh: true,
         }),
