@@ -57,6 +57,12 @@ header {
     font-size: 18px;
     text-decoration: none;
     color: #808080;
+    transition: all 0.2s;
+}
+
+.header-auth:hover, .header-reg:hover {
+    color: #c4b6b6;
+    transition: all 0.2s;
 }
 
 .registration-form {
