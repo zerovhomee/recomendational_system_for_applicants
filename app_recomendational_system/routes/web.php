@@ -9,7 +9,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\StartPageController::class, 'index'])->name('start');
+Route::get('/start', [App\Http\Controllers\StartPageController::class, 'index'])->name('start');
 
 Route::get('/test', [App\Http\Controllers\TestShowController::class, 'index'])->name('test');
 

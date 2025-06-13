@@ -1,0 +1,188 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+        to left,
+        #5e5e5e,
+        #3d3d3d,
+        #292929,
+        #1a1a1a
+    );
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #1A1919;
+    max-width: 1200px; /* Увеличена максимальная ширина */
+    margin: 0 auto; /* Увеличен отступ сверху и снизу */
+    width: 100%;
+    padding: 40px; /* Увеличен padding */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    background: linear-gradient(
+        to left,
+        #5e5e5e,
+        #3d3d3d,
+        #292929,
+        #1a1a1a
+    );
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Согласовано с шириной контейнера */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.header-auth-reg {
+    display: flex;
+    gap: 25px; /* Увеличен gap */
+    align-items: center;
+}
+
+.header-auth, .header-reg {
+    font-size: 18px;
+    text-decoration: none;
+    color: #a0a0a0; /* Светлее серый цвет */
+    transition: color 0.3s ease;
+}
+
+.header-auth:hover, .header-reg:hover {
+    color: #ffffff;
+}
+
+/* Стили для формы */
+.card {
+    background-color: #252525;
+    border: 1px solid #444;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 800px; /* Увеличена максимальная ширина */
+    margin: 0 auto;
+}
+
+.card-header {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    padding: 1.5rem;
+    font-size: 1.8rem; /* Увеличен размер шрифта */
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-body {
+    padding: 2.5rem; /* Увеличен padding */
+}
+
+/* Светлые надписи для полей формы */
+.col-md-4.col-form-label.text-md-end {
+    color: #e0e0e0 !important; /* Светлый цвет текста */
+    font-size: 1.1rem;
+    padding-right: 15px;
+}
+
+.form-control {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #ffffff;
+    padding: 0.85rem 1.2rem; /* Увеличен padding */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    background-color: #3a3a3a;
+    border-color: #a020f0;
+    box-shadow: 0 0 0 0.3rem rgba(160, 32, 240, 0.25);
+    color: #ffffff;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+
+.form-check-input {
+    background-color: #333;
+    border: 1px solid #555;
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 0.2em;
+}
+
+.form-check-input:checked {
+    background-color: #a020f0;
+    border-color: #a020f0;
+}
+
+.form-check-label {
+    color: #e0e0e0; /* Светлый цвет текста */
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #a020f0;
+    border-color: #a020f0;
+    padding: 0.8rem 2rem; /* Увеличен padding */
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+    background-color: #8a1bd1;
+    border-color: #8a1bd1;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(160, 32, 240, 0.4);
+}
+
+.btn-link {
+    color: #a020f0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.btn-link:hover {
+    color: #b591f1;
+    text-decoration: underline;
+}
+
+/* Ошибки валидации */
+.is-invalid {
+    border-color: #dc3545 !important;
+}
+
+.invalid-feedback {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}

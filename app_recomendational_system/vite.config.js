@@ -13,6 +13,8 @@ export default defineConfig({
                 'resources/js/script_page_2.js',
                 'resources/css/style_page_3.css',
                 'resources/js/script_page_3.js',
+                'resources/css/auth.css',
+                'resources/css/reg.css'
             ],
             refresh: true,
         }),
