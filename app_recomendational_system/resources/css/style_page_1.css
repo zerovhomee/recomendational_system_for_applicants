@@ -1,6 +1,12 @@
 body {
     font-family: 'Space Grotesk', sans-serif;
-    background-color: #080808;
+    background: linear-gradient(
+        to left,
+        #5e5e5e,   /* чуть светлее — блик сверху */
+        #3d3d3d,
+        #292929,
+        #1a1a1a
+    );
     margin: 100px auto;
 }
 
@@ -21,14 +27,13 @@ body {
 .header-text {
     font-size: 64px;
     color: #FFF;
-    margin-bottom: 72px;
+    margin-bottom: 52px;
     text-align: center;
 }
 
 .swiper {
     display: flex;
     flex-direction: column;
-    border-radius: 45px;
     width: 100%;
     height: 100%;
 }
@@ -46,21 +51,25 @@ body {
 }
 
 .swiper-slide-container {
+    display: flex;
     position: relative;
+    gap: 110px;
+    padding: 40px;
     border-radius: 25px;
-    /* border: 2px solid #636362; */
+    border: 2px solid #636362;
 }
 
 .swiper-slide-text-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 35px;
+    max-width: 40%;
+    max-height: 400px;
 }
 
 .swiper-slide-title {
     font-weight: 800;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 36px;
     color: #FFF;
     letter-spacing: 0.5px;
@@ -80,6 +89,22 @@ body {
     color: #FFF;
 }
 
+.swiper-slide-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 5%;
+    width: 450px;
+    height: 400px;
+    box-shadow: 0 0 30px #b591f1;
+}
+
+.swiper-slide-img img {
+    width: 70%;
+    height: 70%;
+}
+
 .swiper-slide-points {
     font-weight: 800;
     font-size: 20px;
@@ -96,6 +121,7 @@ body {
     justify-content: center;
     gap: 400px;
     padding-bottom: 5px;
+    padding-top: 20px;
 }
 
 .swiper-button-prev,
@@ -108,7 +134,6 @@ body {
     justify-content: center;
     display: flex;
     gap: 19px;
-    padding-top: 100px;
 }
 
 .swiper-pagination-bullet {
@@ -173,4 +198,535 @@ body {
 .button:hover {
     box-shadow: 0 0 10px #a020f0, 0 0 10px #b591f1, 0 0 10px #FFF;
     background-color: #8c1edb;
+}
+.project-description {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    font-size: 1.1rem; /* Увеличен базовый размер шрифта */
+}
+
+.project-title {
+    color: #a020f0; /* Фиолетовый цвет */
+    font-size: 2.2rem; /* Увеличен размер */
+    margin-bottom: 1.8rem;
+    text-align: center;
+    position: relative;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(160, 32, 240, 0.3);
+}
+
+.project-title:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #a020f0; /* Фиолетовый цвет */
+    margin: 0.8rem auto;
+}
+
+.highlight-paragraph {
+    font-size: 1.3rem; /* Увеличен размер */
+    font-weight: 500;
+    margin-bottom: 1.8rem;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+.feature-block {
+    background: #252525;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    border-left: 5px solid #a020f0; /* Фиолетовый цвет */
+}
+
+.features-list {
+    margin: 1rem 0 0 2rem;
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.1rem; /* Увеличен размер */
+}
+
+.features-list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 2rem;
+    color: #d0d0d0;
+}
+
+.features-list li:before {
+    content: '•';
+    color: #a020f0; /* Фиолетовый цвет */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+.benefits-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin: 2rem 0;
+}
+
+.benefit-item {
+    background: #2a2a2a;
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1.1rem; /* Увеличен размер */
+    color: #a020f0; /* Фиолетовый цвет */
+    border: 1px solid #3a3a3a;
+    font-weight: 500;
+}
+
+.emphasis-text {
+    font-style: italic;
+    background: #2d2d2d;
+    padding: 1.2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    border-left: 5px solid #a020f0; /* Фиолетовый цвет */
+    color: #ffffff;
+    font-size: 1.2rem; /* Увеличен размер */
+}
+
+.institute-highlight {
+    margin: 2.5rem 0;
+    padding: 1.8rem;
+    background: #252525;
+    border-radius: 10px;
+    border: 1px solid #3a3a3a;
+    font-size: 1.1rem; /* Увеличен размер */
+}
+
+.program-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.tag {
+    background: #3a3a3a;
+    color: #a020f0; /* Фиолетовый цвет */
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem; /* Увеличен размер */
+    font-weight: 600;
+    border: 1px solid #a020f0; /* Фиолетовый цвет */
+}
+
+.cta-box {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #252525;
+    border-radius: 10px;
+    border: 1px solid #3a3a3a;
+}
+.recommendation-text {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+    line-height: 1.7;
+}
+
+.benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.benefit-card {
+    background: rgba(160, 32, 240, 0.1);
+    border: 1px solid rgba(160, 32, 240, 0.3);
+    border-radius: 12px;
+    padding: 1.8rem 1.5rem;
+    width: 280px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(160, 32, 240, 0.2);
+    border-color: #a020f0;
+}
+
+.benefit-icon {
+    font-size: 2.2rem;
+    color: #a020f0;
+    margin-bottom: 1rem;
+}
+
+.benefit-text {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.5;
+}
+.institute-cta-block {
+    background: linear-gradient(135deg, rgba(160, 32, 240, 0.1) 0%, rgba(25, 25, 25, 0.9) 100%);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin: 3rem 0;
+    border: 1px solid rgba(160, 32, 240, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.institute-cta-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #a020f0, #7020c0);
+}
+
+.institute-title {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.institute-description {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Адаптированные стили слайдера */
+.institute-cta-block .swiper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+}
+
+.institute-cta-block .swiper-wrapper {
+    display: flex;
+}
+
+.institute-cta-block .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.institute-cta-block .swiper-slide-container {
+    display: flex;
+    position: relative;
+    gap: 60px;
+    padding: 40px;
+    border-radius: 25px;
+    border: 2px solid #636362;
+    background: rgba(26, 25, 25, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.institute-cta-block .swiper-slide-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 45%;
+    max-height: 400px;
+
+}
+
+.institute-cta-block .swiper-slide-title {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 30px;
+    color: #FFF;
+    letter-spacing: 0.5px;
+}
+
+.institute-cta-block .swiper-slide-number {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22.97px;
+    color: #FFF;
+}
+
+.institute-cta-block .swiper-slide-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22.97px;
+    color: #FFF;
+}
+
+.institute-cta-block .swiper-slide-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 5%;
+    width: 450px;
+    height: 400px;
+    box-shadow: 0 0 30px rgba(160, 32, 240, 0.5);
+    transition: all 0.3s ease;
+}
+
+.institute-cta-block .swiper-slide-img:hover {
+    box-shadow: 0 0 40px rgba(160, 32, 240, 0.8);
+}
+
+.institute-cta-block .swiper-slide-img img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.institute-cta-block .swiper-slide-points {
+    position: relative;
+    top: -10px; /* Приподнимаем блок на 10px вверх */
+    margin-bottom: 5px; /* Компенсируем смещение */
+    /* Остальные стили остаются без изменений */
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 22.97px;
+    color: #FFF;
+    border: 2px #FFF solid;
+    padding: 6px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.institute-cta-block .swiper-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 400px;
+    padding-bottom: 5px;
+    padding-top: 20px;
+}
+
+.institute-cta-block .swiper-button-prev,
+.institute-cta-block .swiper-button-next {
+    visibility: hidden;
+}
+
+.institute-cta-block .swiper-pagination {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 19px;
+}
+
+.institute-cta-block .swiper-pagination-bullet {
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 10px;
+    background-color: #a020f0 !important;
+    transition: all 0.8s ease;
+    opacity: 0.5;
+}
+
+.institute-cta-block .swiper-pagination-bullet:hover {
+    transition: all 0.8s ease;
+    box-shadow: 0 0 5px #a020f0, 0 0 10px #b591f1, 0 0 5px #FFF;
+    opacity: 1;
+}
+
+.institute-cta-block .swiper-pagination-bullet-active {
+    background-image: url('../images/star_green.svg') !important;
+    opacity: 1 !important;
+}
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.program-item {
+    background: rgba(160, 32, 240, 0.15);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(160, 32, 240, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.program-item:hover {
+    transform: translateY(-5px);
+    background: rgba(160, 32, 240, 0.25);
+    box-shadow: 0 8px 16px rgba(160, 32, 240, 0.1);
+}
+
+.program-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.program-name {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.cta-content {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px dashed rgba(160, 32, 240, 0.4);
+}
+
+.cta-text {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #a020f0, #8020d0);
+    color: white;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(160, 32, 240, 0.3);
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #9020e0, #7020c0);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(160, 32, 240, 0.4);
+}
+
+.button-icon {
+    font-size: 1.3rem;
+}
+
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    .project-title {
+        font-size: 1.8rem;
+    }
+
+    .highlight-paragraph {
+        font-size: 1.1rem;
+    }
+
+    .benefits-box {
+        flex-direction: column;
+    }
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .benefit-card {
+        width: 100%;
+        max-width: 350px;
+        padding: 1.5rem;
+    }
+
+    .recommendation-text {
+        font-size: 1.1rem;
+    }
+    .institute-cta-block {
+        padding: 1.5rem;
+    }
+
+    .institute-title {
+        font-size: 1.5rem;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media (max-width: 1200px) {
+    .institute-cta-block .swiper-slide-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .institute-cta-block .swiper-slide-text-container {
+        max-width: 100%;
+    }
+
+    .institute-cta-block .swiper-slide-img {
+        width: 100%;
+        max-width: 450px;
+        height: 300px;
+    }
+
+    .institute-cta-block .swiper-controls {
+        gap: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .institute-cta-block {
+        padding: 1.5rem;
+    }
+
+    .institute-title {
+        font-size: 1.5rem;
+    }
+
+    .institute-cta-block .swiper-slide-container {
+        padding: 20px;
+    }
+
+    .institute-cta-block .swiper-slide-title {
+        font-size: 22px;
+    }
+
+    .institute-cta-block .swiper-slide-text {
+        font-size: 16px;
+    }
+
+    .institute-cta-block .swiper-controls {
+        gap: 100px;
+    }
+
+    .institute-cta-block .swiper-pagination-bullet {
+        width: 20px !important;
+        height: 20px !important;
+    }
 }

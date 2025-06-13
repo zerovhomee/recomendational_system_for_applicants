@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('start');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\StartPageController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\StartPageController::class, 'index'])->name('start');
 
 Route::get('/test', [App\Http\Controllers\TestShowController::class, 'index'])->name('test');
 
