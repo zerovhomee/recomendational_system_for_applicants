@@ -1,6 +1,12 @@
 body {
     font-family: 'Space Grotesk', sans-serif;
-    background-color: #080808;
+    background: linear-gradient(
+    to left,
+    #5e5e5e,   /* чуть светлее — блик сверху */
+    #3d3d3d,
+    #292929,
+    #1a1a1a
+    );
     margin: 100px auto;
 }
 
