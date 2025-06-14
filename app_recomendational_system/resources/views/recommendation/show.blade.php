@@ -30,22 +30,16 @@
         </div>
     </div>
 
+    @foreach($recomendations as $recomendation)
     <div class="container">
         <div class="recommendation-card">
-            @foreach($recomendations as $recomendation)
             <div class="recommendation-card-header">
-                <span class="recommendation-card-title"></span>
-                <div class="buttons">
-                    <div class="editing">
-                        <button class="editing-button" type="submit"><img src="{{ asset('images/editing.webp') }}" alt=""></button>
-                    </div>
-                    <div class="trash"><img src="{{ asset('images/trash.webp') }}" alt=""></div>
-                </div>
+                <span class="recommendation-card-title">{{$recomendation->program}}</span>
             </div>
-            <span class="recommendation-card-number"></span>
-            <span class="recommendation-card-text">{{$recomendation->recomendation}}</span>
-            <span class="recommendation-card-text"><br><br>
-            <span class="recommendation-card-points"></span>
+            <span class="recommendation-card-number">Сходство: {{$recomendation->probability}}</span>
+            <span class="recommendation-card-text">{{$recomendation->speciality->description}}</span>
+            <span class="recommendation-card-text">Проходной балл 2024:<br><br>
+            <span class="recommendation-card-points">{{$recomendation->speciality->last_year_mark}}</span>
         </div>
     </div>
     @endforeach

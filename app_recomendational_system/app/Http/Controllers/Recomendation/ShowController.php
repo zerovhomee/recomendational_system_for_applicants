@@ -25,7 +25,10 @@ class ShowController extends Controller
      */
     public function index()
     {
-        $recomendations = Auth::user()->recomendations;
+        $recomendations = Auth::user()->recomendations
+            ->sortByDesc('probability') // Сортировка коллекции по убыванию
+            ->take(3); // Взять первые 3 элемента;
+
         return view('recommendation.show', compact('recomendations'));
     }
 }

@@ -18,6 +18,8 @@ student_text = """
 Мне нравится работать с ИИ. Также мне немного нравится математика, я бы хотел писать на языке python
 """
 
+answer_dict = {}
+
 def model_recomendation(student_text):
 
     student_embedding = model.encode(student_text, normalize_embeddings=True)
@@ -28,21 +30,23 @@ def model_recomendation(student_text):
     )
 
     similarity_scores = similarities[0]
-    top = np.argsort(similarity_scores)[::-1][:3]
+    top = np.argsort(similarity_scores)[::-1]
 
     # Создаем список для хранения результатов
     results = []
 
     for idx in top:
         # Формируем строку с результатом
-        result_str = f"{texts[idx]}...\nСходство: {similarity_scores[idx]:.4f}\n"
-        # Добавляем в список
-        results.append(result_str)
+        result_str = f"{texts[idx][:texts[idx].find("\n")]}".strip()
+        result_int = round(float(similarity_scores[idx]), 4)
+
+        answer_dict[result_str] = result_int
+        #results.append(result_str)
 
     # Теперь все результаты хранятся в переменной results
     # Можно объединить в одну строку:
-    combined_results = "\n".join(results)
+    #combined_results = "\n".join(results)
 
-    return combined_results
+    return answer_dict
 
 print(model_recomendation(student_text))

@@ -13,7 +13,7 @@
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/home') }}">
+            <a class="navbar-brand" href="{{ url('/start') }}">
                 Рекомендательная система для абитуриентов ИРИТ-РТФ
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -72,30 +72,106 @@
 <header>
     <div class="container">
         <div class="header-content">
-            <span class="header-title">Расскажите о себе</span>
-            <span class="header-text">Выберите интересующие вас направления и темы, чтобы мы могли подобрать
-          наиболее подходящие образовательные программы.
+            <span class="header-text">Для большей точности прогноза пройдите пожалуйста тест.
+                Не забудьте указать информацию о себе,своих предпочтениях,хобби и т.п внизу страницы и узнайте рекомендацию.
         </span>
         </div>
     </div>
 </header>
 
 <main>
-
-    <div class="container">
-        <div class="edu-programs">
-            <div class="interests">
-                <div class="interest">Программирование</div>
-                <div class="interest">Робототехника</div>
-                <div class="interest">Искусственный интеллект</div>
-                <div class="interest">Радиоэлектроника</div>
-                <div class="interest">Математика</div>
-                <div class="interest">Физика</div>
-                <div class="interest">Дизайн интерфейсов</div>
-                <div class="interest">Менеджмент проектов</div>
+    <div class="test-container">
+        <form id="careerTestForm" action="{{ route('result') }}" method="post">
+            <!-- Вопрос 1 -->
+            @csrf
+            <div class="question">
+                <h3>1. Какой язык программирования тебе ближе всего?</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="checkbox" name="languages[]" value="Python"> Python
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="languages[]" value="C++"> C++
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="languages[]" value="C#"> C#
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="languages[]" value="JavaScript"> JavaScript
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="languages[]" value="Java"> Java
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="languages[]" value="Kotlin/Swift"> Kotlin/Swift
+                    </label>
+                </div>
             </div>
-            <form action="{{ route('result') }}" method="post" class="contact-information">
-                @csrf
+
+            <!-- Вопрос 2 -->
+            <div class="question">
+                <h3>2. Какую роль тебе комфортнее всего взять в команде?</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="checkbox" name="roles[]" value="Тот, кто пишет сложные алгоритмы"> Тот, кто пишет сложные алгоритмы
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="roles[]" value="Тот, кто анализирует данные и предлагает выводы"> Тот, кто анализирует данные и предлагает выводы
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="roles[]" value="Тот, кто думает, как обезопасить проект"> Тот, кто думает, как обезопасить проект
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="roles[]" value="Тот, кто делает интерфейс"> Тот, кто делает интерфейс
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="roles[]" value="Тот, кто собирает устройство, подключает датчики и отлаживает работу железа"> Тот, кто собирает устройство, подключает датчики и отлаживает работу железа
+                    </label>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="question">
+                <h3>3. С кем тебе проще общаться?</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="checkbox" name="actions[]" value="С компьютером — он логичен"> С компьютером — он логичен
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="actions[]" value="С данными — они честнее слов"> С данными — они честнее слов
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="actions[]" value="С системами — люблю находить, где что ломается"> С системами — люблю находить, где что ломается
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="actions[]" value="С интерфейсами — мне важно, как выглядит и работает"> С интерфейсами — мне важно, как выглядит и работает
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="actions[]" value="С приборами — люблю паять, измерять и проверять, как работает 'железо'"> С приборами — люблю паять, измерять и проверять, как работает "железо"
+                    </label>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="question">
+                <h3>4. Что тебе больше всего нравится в фильмах/сериалах о технологиях?</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="checkbox" name="films[]" value="Искусственный интеллект и его поведение"> Искусственный интеллект и его поведение
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="films[]" value="Хакеры, слежка, цифровая война"> Хакеры, слежка, цифровая война
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="films[]" value="Моменты, где кто-то программирует"> Моменты, где кто-то программирует
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" name="films[]" value="Роботы, механизмы, дроны"> Роботы, механизмы, дроны
+                    </label>
+                </div>
+            </div>
+
+        <div class="edu-programs">
                 <div class="about-me">
                     <span class="about-me-text">Расскажите кратко про свои увлечения:</span>
                     <div class="form-group">
@@ -104,9 +180,9 @@
                     </div>
                 </div>
                 <button type="submit" class="result-btn">Показать результат</button>
-            </form>
         </div>
-    </div>
+        </form>
+        </div>
 </main>
 
 <footer>

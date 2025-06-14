@@ -12,7 +12,7 @@
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/home') }}">
+            <a class="navbar-brand" href="{{ url('/start') }}">
                 Recomendational system
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -76,12 +76,23 @@
     </div>
 </header>
 
-<!-- Блок для вывода длинного текста -->
+
+<!-- Блок с карточками специальностей -->
 <section class="prediction-result">
     <div class="container">
-        <div class="prediction-content scrollable-text">
-            {{ $prediction }}
+        <div class="results-container">
+            @foreach($best_probability as $key => $value)
+                <div class="specialty-card">
+                    <div class="card-header">
+                        <h3>{{ $key }}</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="match-value">Сходство: {{ $value }}%</div>
+                    </div>
+                </div>
+            @endforeach
         </div>
+        <p class="emphasis-text">Для более подробной информации перейдите в личный кабинет и ознакомьтесь с расширенным итогом рекомендации</p>
     </div>
 </section>
 

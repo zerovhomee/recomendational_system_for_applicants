@@ -9,46 +9,77 @@ body {
     max-width: 1034px;
     margin: 0 auto;
     width: 100%;
-    padding: 30px;
+    padding: 10px;
     border-radius: 10px;
     margin-bottom: -15px;
 }
 
-.header-content {
+.results-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
+    padding: 20px 0;
 }
 
-.header-title {
-    font-size: 64px;
-    color: #FFF;
+.specialty-card {
+    width: 300px;
+    background: #b591f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.specialty-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background: #a020f0;
+    color: white;
+    padding: 15px;
     text-align: center;
 }
 
-.header-text {
-    font-size: 32px;
-    color: #FFF;
-    margin: 15px 0 0;
+.card-body {
+    padding: 20px;
 }
 
-.prediction-content {
-    max-height: 300px; /* Фиксированная высота */
-    overflow-y: auto;  /* Вертикальная прокрутка */
-    padding: 15px;
-    background-color: #1a1a1a;
+.match-value {
+    display: inline-block;
+    background: #e9f5ff;
+    color: #2c5282;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* Стили для заголовка */
+.header-content {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.header-title {
+    font-size: 2rem;
+    color: #a020f0;
+    font-weight: 600;
+}
+
+.emphasis-text {
+    font-style: italic;
+    background: #2d2d2d;
+    padding: 1.2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    border-left: 5px solid #a020f0; /* Фиолетовый цвет */
     color: #ffffff;
-    border-radius: 8px;
-    border: 1px solid #dee2e6;
-    white-space: pre-wrap; /* Сохраняет переносы строк */
-    word-break: break-word; /* Перенос длинных слов */
-}
-
-/* Стили для полосы прокрутки */
-.scrollable-text::-webkit-scrollbar {
-    width: 8px;
-}
-.scrollable-text::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 4px;
+    font-size: 1.2rem; /* Увеличен размер */
 }

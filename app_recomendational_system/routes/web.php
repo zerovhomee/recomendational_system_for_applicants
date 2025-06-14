@@ -11,7 +11,11 @@ Auth::routes();
 
 Route::get('/start', [App\Http\Controllers\StartPageController::class, 'index'])->name('start');
 
-Route::get('/test', [App\Http\Controllers\TestShowController::class, 'index'])->name('test');
+Route::get('/test', [\App\Http\Controllers\Test\ShowController::class, 'index'])->name('test');
+
+Route::post('/test', [\App\Http\Controllers\Test\ShowController::class, 'store'])->name('test.store');
+
+Route::get('/test/index', [\App\Http\Controllers\Test\IndexController::class, 'index'])->name('test.index');
 
 Route::post('/test/result', [App\Http\Controllers\ResultController::class, 'index'])->name('result');
 

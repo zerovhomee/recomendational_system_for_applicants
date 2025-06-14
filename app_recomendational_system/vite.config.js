@@ -17,6 +17,7 @@ export default defineConfig({
                 'resources/css/reg.css',
                 'resources/css/personal_account.css',
                 'resources/js/personal_account.js',
+                'resources/css/test.css'
             ],
             refresh: true,
         }),
