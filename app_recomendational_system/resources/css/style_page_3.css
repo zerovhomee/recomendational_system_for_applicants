@@ -23,8 +23,11 @@ body {
 }
 
 .specialty-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #1A1919;
     width: 300px;
-    background: #b591f1;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -32,28 +35,41 @@ body {
 }
 
 .specialty-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
 }
 
 .card-header {
-    background: #a020f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #4A148C, #7B1FA2);
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
+    font-size: 22px;
+    min-height: 100px;
+
 }
 
 .card-body {
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    max-height: 100px;
+    background: linear-gradient(to bottom, #CE9FFC, #B5BBFD);
+    border-top: 2px solid #fff;
+
 }
 
 .match-value {
     display: inline-block;
     background: #e9f5ff;
     color: #2c5282;
-    padding: 5px 10px;
+    padding: 7px 12px;
     border-radius: 20px;
     font-weight: bold;
-    margin-bottom: 15px;
+    font-size: 20px
 }
 
 .description {
@@ -69,7 +85,7 @@ body {
 
 .header-title {
     font-size: 2rem;
-    color: #a020f0;
+    color: #fff;
     font-weight: 600;
 }
 
