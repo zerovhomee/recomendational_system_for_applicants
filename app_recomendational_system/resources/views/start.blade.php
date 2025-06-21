@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
-    <link rel="stylesheet" href="{{ asset("css/style_page_1.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/main_page.css") }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    @vite(['resources/sass/app.scss','resources/js/app.js', 'resources/js/script_page_1.js', 'resources/css/style_page_1.css'])
+    @vite(['resources/sass/app.scss','resources/js/app.js', 'resources/js/main_page.js', 'resources/css/main_page.css'])
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>

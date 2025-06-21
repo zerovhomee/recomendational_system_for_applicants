@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тест </title>
-    <link rel="stylesheet" href="{{ asset("css/style_page_1.css") }}">
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/script_page_2.js', 'resources/css/style_page_2.css'])
+    <link rel="stylesheet" href="{{ asset("css/main_page.css") }}">
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/test.js', 'resources/css/test.css'])
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -147,7 +147,7 @@
                         <input type="checkbox" name="actions[]" value="С интерфейсами — мне важно, как выглядит и работает"> С интерфейсами — мне важно, как выглядит и работает
                     </label>
                     <label class="option">
-                        <input type="checkbox" name="actions[]" value="С приборами — люблю паять, измерять и проверять, как работает 'железо'"> С приборами — люблю паять, измерять и проверять, как работает "железо"
+                        <input type="checkbox" name="actions[]" value="С приборами — люблю паять, измерять и проверять, как работает железо"> С приборами — люблю паять, измерять и проверять, как работает железо
                     </label>
                 </div>
             </div>

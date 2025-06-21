@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тест </title>
-    <link rel="stylesheet" href="{{ asset("css/style_page_1.css") }}">
-    @vite(['resources/sass/app.scss', 'resources/js/script_page_3.js', 'resources/css/style_page_3.css'])
+    <link rel="stylesheet" href="{{ asset("css/main_page.css") }}">
+    @vite(['resources/sass/app.scss', 'resources/js/result.js', 'resources/css/result.css'])
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
@@ -93,6 +93,11 @@
             @endforeach
         </div>
         <p class="emphasis-text">Для более подробной информации перейдите в личный кабинет и ознакомьтесь с расширенным итогом рекомендации</p>
+        <div class="cta-content">
+            <div class="cta">
+                <a class="cta-button" href="{{ route('recommendations.index') }}">Перейти в личный кабинет</a>
+            </div>
+        </div>
     </div>
 </section>
 

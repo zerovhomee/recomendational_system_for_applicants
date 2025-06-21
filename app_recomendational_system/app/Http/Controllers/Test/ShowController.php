@@ -26,15 +26,4 @@ class ShowController extends Controller
     {
         return view('test.show');
     }
-
-    public function store(){
-        $inputData = request()->validate([
-            'text' => 'required',
-        ]);
-        $response = Http::post('http://localhost:5000/predict', [
-            'text' => $inputData
-        ]);
-
-        return redirect(route('test.index'));
-    }
 }

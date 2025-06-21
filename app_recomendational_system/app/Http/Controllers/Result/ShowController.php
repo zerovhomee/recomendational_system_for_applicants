@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Result;
 
+use App\Http\Controllers\Controller;
 use App\Models\Recomendation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Http;
 
-class ResultController extends Controller
+class ShowController extends Controller
 {
     /**
      * Create a new controller instance.

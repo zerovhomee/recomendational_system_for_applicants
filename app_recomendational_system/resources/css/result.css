@@ -99,3 +99,43 @@ body {
     color: #ffffff;
     font-size: 1.2rem; /* Увеличен размер */
 }
+
+.cta-content {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px dashed rgba(160, 32, 240, 0.4);
+}
+
+.cta-text {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #a020f0, #8020d0);
+    color: white;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(160, 32, 240, 0.3);
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #9020e0, #7020c0);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(160, 32, 240, 0.4);
+}
+
+.button-icon {
+    font-size: 1.3rem;
+}
