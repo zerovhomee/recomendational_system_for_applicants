@@ -15,7 +15,7 @@ embeddings = model.encode(texts, normalize_embeddings=True)
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 student_text = """
-Мне нравится работать с ИИ. Также мне немного нравится математика, я бы хотел писать на языке python
+Мне нравится копаться в компьютере, устанавливать и разбираться с программой. Увлекаюсь физикой, изучаю информацию про шифрование данных
 """
 
 answer_dict = {}
