@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->text('program');
             $table->text('probability');
-            $table->integer('speciality_id');
+            $table->bigint('speciality_id');
             $table->foreign('speciality_id')->references('id')->on('specialities');
             $table->timestamps();
         });
