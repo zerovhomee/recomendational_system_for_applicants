@@ -52,7 +52,7 @@ For questions or feedback:
 - **Email:** zerov.live@gmail.com 
 
 
-### **Screenshot (Optional)**  
+### **Screenshot from the site**  
 ![изображение](https://github.com/user-attachments/assets/6b9861a5-d0e6-4bc8-83e3-009aee187201)
  
 
